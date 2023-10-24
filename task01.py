@@ -7,15 +7,19 @@
 
 
 class task1:
-    def __init__(self):
+    def __init__(self,file):
         import json
-        lineData = json.loads(open("task01a.txt","r").read().split(", "))
+        lineData = json.loads(open(file,"r").read())
         biggestnum = 0
+
         for i in lineData:
             if int(i) > biggestnum:
                 biggestnum = int(i)
+
         print(biggestnum)
 
 
 
-task1()
+task1("task01a.txt")
+task1("task01b.txt")
+task1("task01c.txt")
